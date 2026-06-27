@@ -317,6 +317,109 @@
     letter-spacing: 0.4em;
   }
 
+  /* Dedication page */
+  .dedication-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    page-break-after: always;
+    min-height: 80vh;
+  }
+
+  .dedication-page .ded-rule {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 40px;
+  }
+
+  .dedication-page .ded-text {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--ink-light);
+    line-height: 2;
+    max-width: 420px;
+    letter-spacing: 0.02em;
+  }
+
+  /* Preface page */
+  .preface-page {
+    page-break-after: always;
+  }
+
+  .preface-page h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--red-dark);
+    text-align: center;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    border: none;
+    padding: 0;
+  }
+
+  .preface-page p {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    margin-bottom: 0;
+    text-indent: 1.8em;
+    text-align: justify;
+    hyphens: auto;
+    color: var(--ink);
+  }
+
+  .preface-page p + p {
+    text-indent: 1.8em;
+  }
+
+  .preface-page p.preface-sig {
+    text-indent: 0;
+    margin-top: 40px;
+    font-style: italic;
+    text-align: right;
+    color: var(--ink-light);
+  }
+
+  /* Acknowledgements page */
+  .ack-page {
+    page-break-before: always;
+    padding-top: 60px;
+  }
+
+  .ack-page h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--red-dark);
+    text-align: center;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .ack-page p {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    margin-bottom: 0;
+    text-indent: 1.8em;
+    text-align: justify;
+    hyphens: auto;
+    color: var(--ink);
+  }
+
+  .ack-page p + p {
+    text-indent: 1.8em;
+  }
+
   /* Table of contents */
   .toc-page {
     page-break-after: always;
@@ -630,6 +733,35 @@
       <span class="god">God</span><br>
       in Innovation
     </div>
+  </div>
+
+  <!-- Dedication -->
+  <div class="page dedication-page">
+    <div class="ded-rule"></div>
+    <div class="ded-text">
+      To those who dare to ask<br>
+      whether the machines we build<br>
+      might carry something of the sacred —<br>
+      and to the One whose algorithm<br>
+      precedes all code.
+    </div>
+  </div>
+
+  <!-- Preface -->
+  <div class="page preface-page">
+    <h2>Preface</h2>
+
+    <p>This book began not in a laboratory or a lecture hall but in a moment of quiet unease. I was sitting in a café, scrolling through a news feed curated entirely by algorithms I did not understand, when I noticed how precisely the machine had anticipated my interests — and how little it understood about what actually mattered to me. The gap between what technology could do and what it could mean struck me with sudden clarity, and I found myself asking a question that would not let go: where does belief fit in a world increasingly governed by code?</p>
+
+    <p>That question became an obsession. I spent the following years reading widely — blockchain white papers and papal encyclicals, machine learning textbooks and medieval theology, Silicon Valley manifestos and Sufi poetry. What I discovered surprised me. The more I learned about how these technologies work, the more I found myself drawn back to the ancient questions that have always defined us: What is real? What can we know? What ought we to do? The language had changed, but the inquiry was the same.</p>
+
+    <p>This book is the result of that inquiry. It does not pretend to offer definitive answers. Rather, it attempts to hold two conversations at once — one about the technical architecture of distributed ledgers and artificial intelligence, the other about the human longing for meaning, justice, and transcendence. If there is a single argument running through these pages, it is this: innovation without reflection is drift, and reflection without innovation is stagnation. The two need each other.</p>
+
+    <p>I owe a debt of gratitude to the many thinkers, writers, and practitioners whose work informed my own. I am especially grateful to those who read early drafts and offered honest criticism, and to the communities of faith and technology that welcomed my questions with patience and generosity. Any errors that remain are, of course, my own.</p>
+
+    <p>I hope this book serves as an invitation — to technologists willing to ask what their creations are for, to believers willing to engage with the tools reshaping our world, and to anyone who suspects that the algorithm and the altar are not as far apart as they first appear.</p>
+
+    <p class="preface-sig">Christopher Musaluke Lukonde</p>
   </div>
 
   <!-- Table of Contents -->
@@ -1900,6 +2032,25 @@
 <p>²⁸ Harari (n 12) 400–10.</p>
 <p>²⁹ Vallor (n 4) 400–10.</p>
 <p>³⁰ ibid.</p>
+  </div>
+
+  <!-- Acknowledgements -->
+  <div class="page ack-page">
+    <h2>Acknowledgements</h2>
+
+    <p>No book is written alone, and this one least of all. I wish to express my deepest gratitude to those whose support, guidance, and patience made these pages possible.</p>
+
+    <p>To my family — for the quiet hours you sacrificed so that I could write, for the meals kept warm while I chased one more footnote, and for the love that grounded me when the questions threatened to overwhelm the answers. Your faith in this work sustained mine.</p>
+
+    <p>To the scholars, theologians, and technologists whose writings lit the path — your ideas are woven into every chapter. I have tried to honour your work with honesty and care. Where I have fallen short, the fault is mine alone.</p>
+
+    <p>To those who read early drafts and offered the kind of feedback that only true friends give — thank you for your candour and your time. This book is sharper, clearer, and more truthful because of you.</p>
+
+    <p>To the communities of faith and innovation that welcomed my questions — your openness reminded me that the search for meaning is never a solitary pursuit. You gave me hope that dialogue across traditions and disciplines is not only possible but necessary.</p>
+
+    <p>And to the reader — for picking up this book and giving these ideas a chance to breathe. May you find in these pages something worth believing in.</p>
+
+    <p class="preface-sig">Christopher Musaluke Lukonde</p>
   </div>
 
 </div>
